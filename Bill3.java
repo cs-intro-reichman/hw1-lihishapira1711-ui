@@ -6,12 +6,10 @@ public class Bill3 {
 	    String name2 = args[1];
 	    String name3 = args[2];
 		double billAmount = Double.parseDouble(args[3]);
-		double tip = billAmount * 0.15; // Add tip
-		double totalAmount = billAmount + tip;
-		double amountPerPerson = totalAmount / 3;
-	    System.out.println("Total amount: " + totalAmount);
-	    System.out.println(name1 + "'s share: " + amountPerPerson);
-	    System.out.println(name2 + "'s share: " + amountPerPerson);
-	    System.out.println(name3 + "'s share: " + amountPerPerson);
+		double amountPerPerson = billAmount / 3 ;
+		amountPerPerson = Math.ceil(amountPerPerson);
+		System.out.println( "Dear " + name3 + ", " + name2 + ",and " + name1 + ": pay " 
+		+ amountPerPerson + " Shekels each.");	  
 	}
 }
+ 
